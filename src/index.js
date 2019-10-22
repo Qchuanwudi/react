@@ -1,8 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+/* 
+入口js
+*/
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Provider} from 'react-redux'
 
+import App from './containers/App'
+import store from './redux/store'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render((
+  /* 向所有容器组件提供store对象 */
+  <Provider store={store}>
+    <App/>
+  </Provider>
+), document.getElementById('root'))
 
+当有标签嵌套里面加括号

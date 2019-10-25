@@ -1,24 +1,22 @@
 import React, {Component} from 'react'
-import {message} from 'antd'
-import { HashRouter, Switch, Route} from "react-router-dom"
-import Login from './pages/login/Login'
-import Admin from './pages/admin/Admin'
+
+import { Router, Switch, Route} from "react-router-dom"
+import Login from './containers/login'
+import Admin from './containers/admin'
+import history from "./history";
 
 
-class App extends Component{
+export default class App extends Component{
 
-  handleClick= () => {
-    message.success('成功啦...');
-  }
   render(){
     return(
 
-  <HashRouter>
+  <Router history={history}>
          <Switch>
         <Route path="/login" component={Login}/>
-        <Route path="/" component={Login}/>
+        <Route path="/" component={Admin}/>
         </Switch>
-   </HashRouter>
+   </Router>
 
        
     )
@@ -29,4 +27,4 @@ class App extends Component{
   }
 }
 
-export default App;
+

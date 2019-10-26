@@ -16,7 +16,7 @@ export const removeUserToken =()=>{
 // localStorage.removeItem('user_key')
 // localStorage.removeItem('token_key')
 storage.remove(storage.KEYS.USER_KEY)
-storage.remove(storage.KEYS.USER_KEY)
+storage.remove(storage.KEYS.TOKEN_KEY)
 return {type:REMOVE_USER_TOKEN}
 }
 
@@ -36,7 +36,7 @@ if (result.status===0) {
  const{user,token} = result.data
 
  storage.set(storage.KEYS.USER_KEY,user)
- storage.set(storage.KEYS.USER_KEY,token)
+ storage.set(storage.KEYS.TOKEN_KEY,token)
 
 
 //  localStorage.setItem('user_key',JSON.stringify(user))

@@ -21,7 +21,7 @@ const { Item } = Form // 必须在所有import的下面
 
 
 @connect(
-  state => ({}),  // 用于显示的一般属性
+  null,  // 用于显示的一般属性
   {loginAsync} // 用于更新状态的函数属性
  
 )

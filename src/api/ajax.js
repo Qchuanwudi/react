@@ -13,7 +13,7 @@ import history from "../history";
 
 //创建一个人instance
 const instance = axios.create({
-timeout:100000//请求超时时间
+timeout:10000000//请求超时时间
 
 })
 /* 进度条*/
@@ -84,7 +84,7 @@ error=>{
 //请求出错
 const {status,data:{msg}={}} = error.response
 if (status===401) {
-  if (history.location.pathname !=='./login') {
+  if (history.location.pathname !=='/login') {
     message.error(msg)
     store.dispatch(removeUserToken())
   }
@@ -105,7 +105,7 @@ message.error('请求资源不存在')
 
 
 
-message.error('请求出错：' + error.message)
+
 
 
 //中断请求处理不在将错误，传给外部处理

@@ -6,7 +6,7 @@ export default class Pie extends Component {
     return (
       <div>
         Pie
-        6166262626
+        
       </div>
     )
   }
